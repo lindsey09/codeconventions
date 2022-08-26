@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<style>
+    #thebody{width:500px; height:500px; border:1px solid #000;}
+</style>
 </head>
 <body>
     <h1>이렇게 타이틀을 적어줍니다.</h1>
@@ -16,17 +21,30 @@
         <li class="pick_li">3</li>
     </ul>
 
+    <button onclick="clearInterval(auto_1)" class="btn ">증가 정지</button>
+    <button onclick="clearInterval(auto_2)" class="btn">감소 정지</button>
+
+
+    <div id="thebody">
+        <button onClick="changeColor();"> 배경색바꾸기 </button>
+    </div>
+
+
     <script>
-        
-        let userName = prompt('what`s your name?');
 
-        let upperName = userName.toUpperCase();
-        document.write(upperName);
+        function testAvg(arrData){
+            let sum = 0;
+            for(let i = 0; i<testAvg.length; i++;){
+                sum += Number(prompt(arrData[i]+'점수는?'));
 
-        let userNum = prompt('what`s your telephone-number?');
-        let result = userNum.substring(0, userNum.length-4) + "****";
-        document.write(result);
+            }
+            let avg=sum/arrData.length;
+            let result = testAvg(arrSubject);
+        };
+
+        document.write('평균점수는'+result+'입니다.');
 
     </script>
 </body>
 </html>
+

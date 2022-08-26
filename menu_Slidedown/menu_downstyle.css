@@ -63,11 +63,11 @@ header .header .header-nav > li:hover:before{
 }
 
 header .header .header-nav > li > ul {
-    margin-top:20px;
+    margin-top:0px;
     background:#fff;
     padding:10px 20px;
     height:150px;
-    dis play: none;
+    display: none;
 }
 header .header .header-nav > li > ul > li{
     font-size:0.8em;
