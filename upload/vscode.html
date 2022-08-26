@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이렇게 타이틀을 적어줍니다.</h1>
+    <h3>깃허브와 자바스크립트 제이쿼리를 배워볼까요</h3>
+
+    <ul class="pick">
+        <li class="pick_li">1</li>
+        <li class="pick_li">2</li>
+        <li class="pick_li">3</li>
+    </ul>
+
+    <script>
+        
+        let userName = prompt('what`s your name?');
+
+        let upperName = userName.toUpperCase();
+        document.write(upperName);
+
+        let userNum = prompt('what`s your telephone-number?');
+        let result = userNum.substring(0, userNum.length-4) + "****";
+        document.write(result);
+
+    </script>
+</body>
+</html>

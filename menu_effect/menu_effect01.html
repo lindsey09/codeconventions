@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    
+    <style>
+       nav a{color:#000; text-decoration: none; margin:2em;}
+       nav:first-child{display:flex; justify-content:center;}
+       nav:nth-child(2){display:flex; flex-direction: column; align-items: center;}
+       #horizontal-underline{width:0%; height:4px; background:#F00; position:absolute; top:65px; left:0;}
+       
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div id="horizontal-underline"></div>
+        <a href="">about</a>
+        <a href="">product</a>
+        <a href="">jQuery</a>
+        <a href="">responsibility</a>
+        <a href="">javascript</a>
+    </nav>
+
+    <nav>
+        <div id="vertical-underline"></div>
+        <a href="">about</a>
+        <a href="">product</a>
+        <a href="">jQuery</a>
+        <a href="">responsibility</a>
+        <a href="">javascript</a>
+    </nav>
+
+
+
+    <script>
+        let horizontalUnderLine = document.getElementById('horizontal-underline');
+        let horizontalMenu = document.querySelectorAll('nav:first-child a');
+        // console.log(horizontalMenu);    
+
+        
+        horizontalMenu.forEach((menu) => menu.addEventListener('click', (e)=> horizontalIndicator(e)))
+
+        function horizontalIndicator(e){
+            horizontalUnderLine.style.left = e.currentTarget.offsetLeft + "px";
+            horizontalUnderLine.style.width = e.currentTarget.offsetWidth + "px";
+            horizontalUnderLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + "px";
+        }
+   
+
+    </script>
+
+</body>
+</html>
