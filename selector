@@ -1,0 +1,22 @@
+선택자 유형별
+
+- 자식선택자
+div > div : 즉 바로 아래 있는 자식요소만 선택
+
+- 자손선택자
+div ul : div 하위 ul 자손 모두 선택
+
+- 형제선택자
+input[id="checkbox"] + label em : 앞의 요소 바로 다음 요소만 선택
+
+- 속성선택자
+element[attr="value"] / input[name="user-id"] : attr 기본요소에 추가적으로 들어오는 값 
+element[attr^="value"] / a[href^="http"] : 해당속성을 가진 선택자 모두
+element[attr$="value"] / a[href$=".pdf"] : value 값으로 끝나는 모든 속성
+element[attr*="value"] / a[href*="naver"] : value 값을 포함한 모든 요소
+
+
+- 구조적 가상 요소 선택자
+:first-child / :nth-child(n) / :last-child
+:first-of-type / :nth-of-type(n) / :last-of-type
+
