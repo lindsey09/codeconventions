@@ -1,19 +1,32 @@
 선택자 유형별
 
+- *
+모든 선택자
+
+- 가상클래스선택
+a:link {} - 클릭한 페이지 선택
+a:visted {} - 방문했던 페이지 선택
+
+
 - 자식선택자
-div > div : 즉 바로 아래 있는 자식요소만 선택
+div > div : 즉 바로 아래 있는 자식요소만 선택 (직계자식만 선택)
 
 - 자손선택자
 div ul : div 하위 ul 자손 모두 선택
 
-- 형제선택자
+- 형제선택자(인접선택자)
 input[id="checkbox"] + label em : 앞의 요소 바로 다음 요소만 선택
+div ~ p : div 아래 있는 모든 p 요소 선택
+
 
 - 속성선택자
 element[attr="value"] / input[name="user-id"] : attr 기본요소에 추가적으로 들어오는 값 
 element[attr^="value"] / a[href^="http"] : 해당속성을 가진 선택자 모두
 element[attr$="value"] / a[href$=".pdf"] : value 값으로 끝나는 모든 속성
 element[attr*="value"] / a[href*="naver"] : value 값을 포함한 모든 요소
+element[title] / a[title] : title 속성이 있는 a 태그만 선택
+element[href="https://naver.com"] : 네이버 href 있는 태그만 선택
+element[href*="ver"] : href에 ver 이 포함된 모든 태그 선택
 
 
 - 구조적 가상 요소 선택자
