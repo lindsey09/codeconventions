@@ -7,6 +7,11 @@
 a:link {} - 클릭한 페이지 선택
 a:visted {} - 방문했던 페이지 선택
 
+input[type=radio]:checked{} - 라디오버튼 중 체크된 항목 선택
+clear:after / clear:before - 가상클래스 선택 
+
+a:hover{}
+div:not(#container) - div중 #container를 제외한 것들 선택 
 
 - 자식선택자
 div > div : 즉 바로 아래 있는 자식요소만 선택 (직계자식만 선택)
@@ -27,9 +32,21 @@ element[attr*="value"] / a[href*="naver"] : value 값을 포함한 모든 요소
 element[title] / a[title] : title 속성이 있는 a 태그만 선택
 element[href="https://naver.com"] : 네이버 href 있는 태그만 선택
 element[href*="ver"] : href에 ver 이 포함된 모든 태그 선택
-element[data-*="image"] / <a href="#" data-filter="image"></a>  이중 a[data-filter="image"] : a 태그 중, data-filter값을 가지는 것
+element[data-*="image"] / <a href="#" data-filter="image"></a>  이중 a[data-filter="image"] : a 태그 중, data-filter값을 가지는 
+element[data-info~="external"] / <a href="#" data-info="image external"></a> 두 개의 값중 하나라도 있는 태그 선택 / ~ 로 구분하면 띄어쓰기로 구분되는 값이 있는 속성을 대상
+
 
 - 구조적 가상 요소 선택자
 :first-child / :nth-child(n) / :last-child
 :first-of-type / :nth-of-type(n) / :last-of-type
+
+
+
+단락의 첫 글자와 첫 줄
+p::first-letter - 단락의 첫 글자
+p::first-line - 단락의 첫 줄
+
+element:only-child{} / div p:only-child{} - 첫번째 div만 해당 
+element:only-of-type()
+
 
